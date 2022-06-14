@@ -1,10 +1,3 @@
-/*
-
-Softy Pinko
-
-https://templatemo.com/tm-535-softy-pinko
-
-*/
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
@@ -1753,4 +1746,9 @@ preloader
   100% {
     opacity: 0;
   }
+}
+
+.svg{
+  height: 33px;
+  width: 160px;
 }
