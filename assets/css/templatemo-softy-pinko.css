@@ -803,6 +803,8 @@ welcome
   background-position: center center;
   background-size: cover; 
   height: 100vh;
+  margin-top: 9vh;
+  margin-bottom: 10vh;
 }
 
 .welcome-area .header-text {
