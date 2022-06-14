@@ -491,7 +491,18 @@ header
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
   display: inline-block;
-  font-size: 10vw;
+}
+
+@media (min-width: 500px) {
+  .animate-character {
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .animate-character {
+    font-size: 8vh;
+  }
 }
 
 @keyframes textclip {
