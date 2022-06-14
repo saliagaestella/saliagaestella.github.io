@@ -474,7 +474,6 @@ header
 
 .animate-character
 {
-  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #ffffff 0%,
@@ -813,6 +812,7 @@ welcome
   transform: translateY(-55%);
   text-align: center;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .welcome-area .header-text h1 {
@@ -900,6 +900,14 @@ welcome
   }
 }
 
+@media (min-width: 765px) {
+  .welcome-area .header-text h1 {
+    white-space: nowrap;
+  }
+  .welcome-area .header-text p {
+    white-space: nowrap;
+  }
+}
 
 /* 
 ---------------------------------------------
