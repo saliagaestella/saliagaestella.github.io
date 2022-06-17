@@ -349,10 +349,10 @@ body {
 
 /*---Puebas Botones----*/
 a.main-button-slider {
-  --glow-color: rgb(186, 197, 245);
+  --glow-color: rgba(186, 197, 245, 0.466);
   --glow-spread-color: rgba(53, 56, 206, 0);
   --enhanced-glow-color: rgb(0, 0, 12);
-  --btn-color: rgb(47, 88, 134);
+  --btn-color:  rgba(0,0,122,1);
   --letter-color: rgb(241, 246, 252);
   border: .25em solid var(--glow-color);
   padding: 1em 3em;
@@ -556,7 +556,7 @@ header
   background-size: 200% auto;
   color: rgb(255, 255, 255);
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 6s linear infinite;
@@ -1842,4 +1842,39 @@ preloader
 .svg{
   height: 33px;
   width: 160px;
+}
+
+.hacking-animation {
+  background: #15151500;
+  color: #eee;
+  height: 100%;
+}
+.hacking-animation__text {
+  bottom: 0;
+  font-family: "Share Tech Mono", monospace;
+  color: #eee;
+  font-size: 1vw;
+  left: 0;
+  line-height: 1rem;
+  padding: 0rem;
+  position: absolute;
+  right: 0;
+}
+.hacking-animation__character {
+  animation: type 1s linear;
+  color: #45aae7;
+}
+@keyframes type {
+  0% {
+    background: #fff;
+    color: #eee;
+ }
+  5% {
+    background: transparent;
+    color: #fff;
+ }
+  100% {
+    background: transparent;
+    color: #45aae7;
+ }
 }
