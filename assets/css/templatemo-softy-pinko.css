@@ -1661,7 +1661,12 @@ contact
 }
 
 .green {
-  color: #1dbf73
+  color: #1dbf73;
+}
+
+.telegram {
+  font-size: 1.5rem;
+  color: #003087;
 }
 
 .contact-form input,
