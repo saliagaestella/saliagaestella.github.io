@@ -13,7 +13,6 @@ Table of contents
 10. contact
 11. footer
 12. preloader
-
 --------------------------------------------- */
 /* 
 ---------------------------------------------
@@ -412,7 +411,6 @@ a.main-button-slider {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-
 a.main-button-slider:hover {
   background-color: #009cdec4;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -1999,4 +1997,10 @@ a {
   to {
     visibility: hidden;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .sizetyper { 
+    display: none; 
+  } 
 }
