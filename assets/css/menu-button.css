@@ -1,0 +1,23 @@
+.li.ss-nav-button {
+    padding: 10px;
+  }
+  
+  .li.ss-nav-button > a {
+    padding: 5px 18px !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+    background-color: #0f637d;
+  }
+  
+  /* Adjust the position for the fixed navigation menu */
+  .li.ss-nav-button a {
+    position: relative;
+    bottom: 6px;
+  }
+  
+  /* Give the button a hover & active state */
+  .li.ss-nav-button a:active,
+  .li.ss-nav-button > a:hover {
+    color: #ffffff !important;
+    background-color: #196f8c;
+  }
