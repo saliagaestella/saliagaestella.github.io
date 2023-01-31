@@ -56,13 +56,13 @@ header
   display: inline-block;
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 500px) {
   .animate-character {
     font-size: 10vw;
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .animate-character {
     font-size: 8vh;
   }
@@ -74,7 +74,7 @@ header
   }
 }
 
-@media (min-width: 260px){
+@media only screen and (min-width: 260px){
   .blue {
     text-transform: uppercase;
     background-size: auto auto;
@@ -87,7 +87,7 @@ header
   }
 }
 
-@media (max-width: 260px){
+@media only screen and (max-width: 260px){
   .blue {
     text-transform: uppercase;
     background-size: auto auto;
@@ -297,7 +297,7 @@ header
   width: 160px;
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
     padding-right: 12px;
@@ -307,7 +307,7 @@ header
   }
 }
 
-@media (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .header-area {   
     margin-left:5px;
     margin-right: 5px;
@@ -379,7 +379,7 @@ header
 
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .header-area .main-nav .nav {
     display: flex !important;
   }
@@ -412,7 +412,7 @@ header
   height:5px;
   width:5px;
 }  
-@media (min-width: 991px){
+@media only screen and (min-width: 991px){
 #profile-pic{
   display: block;
 } 
@@ -937,7 +937,7 @@ el responsable de que el boton de connevct wallet sea alargado*/
   font-family: 'Georgia';
   font-size: 3vw;
   margin-bottom: 40px;
-  margin-top: 30px;
+  margin-top: 75px;
   color:#fff;
   text-align: center;
 }
@@ -946,7 +946,7 @@ el responsable de que el boton de connevct wallet sea alargado*/
   font-family: 'Georgia';
   font-size: 3vw;
 	margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 200px;
   color:#fff;
   text-align: center;
 }
@@ -956,17 +956,9 @@ li{
   list-style: none;
 }
 
-.test-disclaimer{
- margin-left:25%;
-}
-
 .chain-emoji{
   color:#4fabcf;
   font-size: 12px;
-}
-
-.disclaimer{
-  margin-top: 2%;
 }
 
 /*Trx-text*/
@@ -1026,21 +1018,15 @@ li{
     font-family: 'Georgia';
     font-size: 18px;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 100px;
     color:#fff;
     text-align: center;
   }
-  .test-disclaimer{
-    margin:2%;
-    text-align: center;
-   }
+
    .list-trxDetails{
     margin:2%;
     text-align: center;
    }
-   .disclaimer{
-    margin-top: 7%;
-  }
 }
 
 /*Validate Inputs*/
@@ -1163,10 +1149,7 @@ Contact
   line-height: 26px;
 }
 
-texto4 
-.contact-text p {
-  margin-bottom: 28px;
-}
+
 
 .green {
   color: #1dbf73;
