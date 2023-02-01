@@ -872,7 +872,7 @@ $assetForm.addEventListener("submit", async function (e,value) {
         let $name_ = document.getElementById('name').value;
         let $decimalUnits = document.getElementById('decimals').value;
         let $symbol_ = document.getElementById('symbol').value;
-        let $initialSupply_= ($numberTokens*Math.pow(10, document.getElementById('decimals').value));
+        let $initialSupply_= BigInt($numberTokens*Math.pow(10, document.getElementById('decimals').value));
   /* 4.3. ...Validar input form...*/
         if ($name_ === '') {
             document.getElementById('name-error-msg').innerHTML = "Input can't be blank"
