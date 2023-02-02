@@ -355,17 +355,18 @@ body {
   background-color: rgb(9 83 168);
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 0.25px;
-   -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  margin-bottom: 30px;
+  letter-spacing: 1px;
   font-size:11px;
-  display:block;
 } 
 .menu-btn-login:hover {
   background-color: #009cde;
+}
+
+@media only screen and (max-width: 450px){
+  .menu-btn-login {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } 
 }
 
 a.main-button-slider {
