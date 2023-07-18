@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <div class="product">
+        <img src="file-20180627-112598-bhl55u.avif" alt="token photo" />
+        <div class="description">
+          <h3>ERC20 Tokens</h3>
+          <h5>$50.00</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit" id="checkout-button">Buy</button>
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTY995C50F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QTY995C50F');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Multi Step Form | ERC20 TOKEN</title>
+    <link rel="stylesheet" href="assets/css/multistepStyle.css"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/multistepTogglestyle.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/snackbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
+     <!-- <link rel="stylesheet" type="text/css" href="assets/css/togglestyle.css"> -->
+
+   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+
+  </head>
+
+  <body>
+    <div class="container">
+      <header>Create Token</header>
+      <button class = "connect-wallet multistep" id="btn-login-menu">Connect Wallet</button> <span id="delete-install-link" class="install-wallet-link"> <a href="../docs.html#marker-link-generator" target="_blank" id="install-wallet-link" class="install-wallet-link"><strong>Install Wallet</strong></a></span>
+      <div id = "hide1"class="progress-bar">
+        <div class="step">
+          <p>Chain</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Details</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Extras</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Payment</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer" id = "hide2" >
+        <form class="design" id="asset-form2">
+          <div class="page slide-page">
+            <div class="title">Choose chain:</div>
+            
+            <table class="second-step">
+              <tr class="choose-mainORtest">
+                  <th class="switchtext" id="toggleText"> Mainnets </th>
+                  <th class="btn-holder">
+                      <div class="btn-circle"></div>
+                      <input type="checkbox" class="checkbox">
+                  </th>
+              </tr> 
+              <!--Toggle switch  test and main-net ends-->
+              <!--Buttons choose chain begins-->
+              <span class="truco">
+              <tr id="chooseChain">
+                  <th><button id="btn-mumbai" type="button" class="networkButtons phone mumbai" onclick="switchNetwork(this,'mumbai')"> 
+                      <img class = "mumbai-logo" src="assets\images\polygon-matic-logo.png" style="float:left;margin-right:0.5em">Mumbai</button></th> <!--llamando aqui la funcion asi evitamos q se ejecute directamemte-->
+                  <th><button id="btn-bscTest" type="button" class="networkButtons phone" onclick="switchNetwork(this,'bsctest')">
+                      <img class = "bsc-logo" src="assets\images\Binance_Logo.svg.png" style="float:left;margin-right:0.5em">BSC</button></th>
+                  <th><button id="btn-goerli" type="button" class="networkButtons phone" onclick="switchNetwork(this,'goerli')">
+                      <img class = "eth-logo" src="assets\images\Ethereum-Logo.png" style="float:left">Goerli</button></th>
+                  <th><button id="btn-polygon" type="button" class="networkButtons phone" onclick="switchNetwork(this,'polygon')">
+                      <img class = "mumbai-logo" src="assets\images\polygon-matic-logo.png" style="float:left;margin-right:0.5em">Polygon</button></th>
+                  <th><button id="btn-bscMain" type="button" class="networkButtons phone" onclick="switchNetwork(this,'bscmain')">
+                      <img class = "bsc-logo" src="assets\images\Binance_Logo.svg.png" style="float:left;margin-right:0.5em">BSC</button></th>
+                  <th><button id="btn-eth" type="button" class="networkButtons phone" onclick="switchNetwork(this,'ethmain')">
+                      <img class = "eth-logo" src="assets\images\Ethereum-Logo.png" style="float:left">ETH</button></th>
+              </tr>
+              </span>
+              </table>
+            <!--
+            <div class="field">
+              <div class="label">Mainnet</div>
+              <select>
+                <option style="background-image:url(assets/images/polygon-matic-logo.png); height: 15px; width:15px;">Polygon
+                  </option>
+                <option>Binance Smart Chain</option>
+                <option>Ethereum</option>
+              </select>
+            </div>
+            
+              <div class="label dropdown">Testnet</div>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn" id="selected-chain">Select chain</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <button class="btn-chain-multi" id="btn-mumbai" onclick="switchNetwork(this,'mumbai')">Mumbai</button>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+              </div>
+           -->
+            <!--
+            <div class="field">
+              <div class="label">Testnet (not valid for production)</div>
+              <select>
+                <option id="btn-mumbai" onclick="switchNetwork(this,'mumbai')">Mumbai Polygon</option>
+                <option>BSC Testnet</option>
+                <option>Goerli Testnet</option>
+              </select>
+             </div>
+              -->
+              <!-- <input type="text"> -->
+           
+              <!-- <input type="text"> -->
+           
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+          </div>
+          
+          <form id="asset-form"> 
+          <div class="page">
+            <div class="title">Token Details:</div>
+            <div class="field col-half">
+              <div class="label two">Name</div>
+              <input id ="name"class="second" type="text">
+              <p class="label two" id ="name-error-msg"></p>
+            </div>
+            <div class="field other-half">
+              <div class="label two">Symbol</div>
+              <input id ="symbol" class="second type="text">
+              <p class="label two" id ="symbol-error-msg"></p>
+            </div>
+            <div class="field col-half last">
+              <div class="label two">Supply</div>
+              <input id ="numberTokens" class="second type="text">
+              <p class="label two" id ="numberTokens-error-msg"></p>
+            </div>
+            <div class="field other-half">
+              <div class="label two" >Decimals</div>
+              <input class="second" id ="decimals" type="text">
+              <p class="label two" id ="decimals-error-msg"></p>
+            </div>
+            
+            
+            <!--
+            <div class="field">
+              <div class="label two">Decimals</div>
+              <input class="second type="Number">
+            </div>
+            <div class="field">
+              <div class="label two">Supply</div>
+              <input class="second type="Number">
+            </div>
+            -->
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Extras:</div>
+            <div class="field extras whale">
+              <div class="label">AntiWhale
+                <span>
+                <!-- Rounded switch -->
+                <label class="switch">
+                    <input type="checkbox" id="whale" onclick="addExtra('whale')">
+                    <span class="slider round mark whale"></span>
+                    </label> 
+                      <input id ="maxWhale" placeholder="Max. amount" class="maxWhale">
+                      <span class="label two" id ="maxWhale-error-msg"></span>
+                  </span> </div>
+                    <ul>
+                <li class="extrasText"><strong>Description:</strong> limits the max. amount of tokens any user can have</li>
+                  </ul>
+            </div>
+            <div class="field extras">
+              <div class="label">Burnable
+              <span>
+              <!-- Rounded switch -->
+              <label class="switch">
+                  <input type="checkbox" id="burnable" onclick="addExtra('burnable')">
+                  <span class="slider round"></span>
+                  </label> </span> </div>
+              <ul>
+                  <li class="extrasText"><strong>Description:</strong> enables the owner to burn tokens, decreasing the supply.</li>
+                
+              </ul>
+            </div>
+            <div class="field extras">
+              <div class="label">Pausable
+                <span>
+                    <!-- Rounded switch -->
+                    <label class="switch">
+                    <input type="checkbox" id="pausable" onclick="addExtra('pausable')">
+                    <span class="slider round"></span>
+                    </label> </span> </div>
+                <ul>
+                    <li class="extrasText"><strong>Description:</strong> enables the owner to pause and resume transactions</li>
+                  
+                </ul>
+              </div>
+            <!--
+            <div class="field">
+              <div class="label">Date</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <div class="label">Gender</div>
+              <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            -->
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+        
+          <div class="page">
+            <div class="title">Price: <span class ="title" id = "price-variable">50</span>$ <span class = "price-detail" id="price-detail">(Token + 0 extras)</span></div>
+            <div class="field col-half crypto">
+              <div id="crypto-payment-mssg" class="label">Pay with Crypto</div>
+              <div class="statusText" id="statusText">
+                <div class="patienceText" id="patienceText"></div>
+              </div>
+              
+              <button id="crypto-payment" type="button" onclick="triggerDeployToken()" class="payment crypto">
+                <img src="assets\images\metamask-logo.png" style="float:left;margin-right:0.5em" width="20" height="20">
+                  Pay with Metamask
+              </button> 
+              
+              <div class="separator"></div>
+
+             
+             
+            </div>
+            
+            <div class="field other-half">
+              <div class="label" id="card-payment-mssg">Pay with Card</div>
+              <section id="card-payment">
+                <div class="product">
+                    <img class="token-photo" src="assets\images\BlueTransparente_Isotipo.png" alt="token photo" />
+                    <div class="description">
+                      <h3>ERC20 Tokens</h3>
+                      <!-- <h5>$50.00</h5> -->
+                    </div>
+                </div>
+                  <button class="stripe" type="button" id="checkout-button-trigger">Buy</button>
+                  <p class="label coming-soon">Coming Soon</p>
+                  <!-- BOTON usado para activar STRIPE, de aqui se llama a los forms que llaman al server
+                    <button class="stripe" type="button" onclick="stripeSelect()" id="checkout-button-trigger">Buy</button>
+                  -->
+                <!--onclick="document.getElementById('checkout-button1').click()"-->
+              </section>
+              <input class ="loader" type="checkbox" id="check">
+              <label id="loader" class="loader" for="check">
+                 <div class="check-icon"></div>
+              </label>
+            </div>
+               <div class="field btns">
+
+                <button class="prev-3 prev">Previous</button> 
+              </div>
+
+            
+             
+
+              
+           
+
+            
+            <!-- <button class="next-3 next">Next</button> --> 
+
+              <!-- <button type="submit" class="submit">Submit</button> -->
+            
+          </div>
+          </div>
+
+          
+        </form>  
+      </form>
+      </div>
+    </div>
+
+    <form action="/create-checkout-session" method="POST">
+      <button class="stripe" style="margin-left:10px" type="submit" id="checkout-button" >Buy</button>
+    </form>
+    <form action="/create-checkout-session1" method="POST">
+      <button class="stripe" type="submit" id="checkout-button1" >Buy</button>
+    </form>
+    <form action="/create-checkout-session2" method="POST">
+      <button class="stripe" type="submit" id="checkout-button2" >Buy</button>
+    </form>
+    <form action="/create-checkout-session3" method="POST">
+      <button class="stripe" type="submit" id="checkout-button3" >Buy</button>
+    </form>
+    <div id="snackbar">Snackbar...</div>
+    <div id="snackbarFunds">Snackbarfunds...</div>
+    
+    <!--<button class = "connect-wallet multistep" id="btn-login-menu">Wallet</button> -->
+
+    <script src="assets/js/multistep.js"></script>
+
+    <script type="text/javascript" src="assets/js/generatorMultistep.js" ></script> 
+    
+
+  </body>
+</html>
