@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+ /* background: linear-gradient(135deg, rgba(2,0,17,1) 0%, rgba(0,0,122,1) 10%, rgba(2,0,17,1) 50%, rgba(0,0,122,1) 70%, rgba(2,0,17,1) 100%); 
+ /* background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d); */
+}
+::selection{
+  color: #fff;
+  background: #5293bb;
+}
+.container{
+  width: 330px;
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  padding: 30px 35px 1px 35px; /*50px 35px 10px 35px;*/
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer .design{
+  display: flex;
+  width: 400%;
+}
+.form-outer .design .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer .design .page .title{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer .design .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+.form-outer .design .page .btns{
+  width: 330px;
+  height: 45px;
+  margin: 0px 0;
+  display: flex;
+  position: relative;
+}
+.form-outer .design .page .field.extras{
+  width: 330px;
+  height: 45px;
+  margin: 25px 0;
+  display: flex;
+  position: relative;
+}
+.form-outer .design .page .field.extras.whale{
+  margin-top: 40px;
+}
+.design .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+.design.page .field .label span{
+  margin-top:5px;
+}
+
+.design .page .field .two{
+  position: absolute;
+  top: -30px;
+  font-size: 12px;
+}
+.design .page .field .two.extra{
+  position: absolute;
+  top: -30px;
+  font-size: 12px;
+}
+.design .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+.design .page .field input.second{
+  height: 75%;
+  width: 75%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+.design .page .field.col-half{
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left; /*la pos de birth y CVC*/
+  width: 45%;
+}
+.design .page .field.col-half.crypto{
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left; /*la pos de birth y CVC*/
+  width: 45%;
+  margin-bottom: 40%;
+}
+.design .page .field.col-half.last{
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left; /*la pos de birth y CVC*/
+  width: 45%;
+  margin-top:0px;
+}
+.design .page .field.other-half{
+  width:45%;
+  margin-left: auto;
+}
+.design .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.design .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #0095da;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+.design .page .field button:hover{
+  background: #0095da;
+}
+.design .page .btns button{
+  margin-top: -15px!important;
+}
+.design .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+.design .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 25px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #0095da;
+  background: #0095da;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #0095da;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #0095da;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+
+/*Extras*/
+.extrasText{
+  color:#212529;
+  font-size: 12px;
+  
+  }
+  /*Testnets-disclaimer*/
+  
+  li{
+    list-style: none;
+  }
+  .price-detail{
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  /*
+  .separator {
+    border-left: 1px solid rgb(189, 201, 189);
+    height: 150px;
+    margin-left: 25px;
+  } */
+  .design .page .field button.payment {
+    font-size: 8px;
+    border-radius: 20px;
+    padding: 1px 15px; /*12px 20px*/
+    background-color: rgb(9 83 168);
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin: 20% 10%;
+    /*margin-left: 250px;*/
+  } 
+
+  .design .page .field button.stripe{
+  height: 36px;
+  background: rgb(9 83 168);
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.6;
+  border-radius: 0 0 6px 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+  cursor: not-allowed;
+  }
+  h3,
+h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  color: #242d60;
+  margin: 0;
+}
+h5 {
+  opacity: 0.5;
+}
+
+.token-photo {
+  border-radius: 6px;
+  margin: 10px;
+  width: 23px;
+  height: 24px;
+} 
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+  
+}
+
+section {
+  background: #f2f3f5;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 80px;
+  border-radius: 6px;
+  justify-content: space-between;
+  margin-top:15px;
+}
+.product {
+  display: flex;
+  width: 175%;
+}
+
+
+/*Select chain*/
+.second-step{ /*moves only toggle switch, not choose chain text*/
+  /*box-shadow: 0 4px 3px -3px whitesmoke; */
+  display:flex;
+  justify-content: center;
+  margin-left: 0px;
+  margin-top: 25px;
+}
+
+                              /*Ahora mismo no hay, si se pone aparece arriba del toggleswitch
+                              #chooseChainText{
+                                  display:flex;
+                                  margin-left: px;
+                                  margin-top: 25px;
+                              } */
+
+.choose-mainORtest{
+  display:flex;
+  margin-left: 75px;
+} 
+
+/*TOGGLESWITCH*/
+.truco{
+  display:flex;
+}
+.btn-holder { 
+  width: 28px; /*50 */
+  height: 16px; /*26 */
+  border-radius: 20px; /*le da la forma circular*/
+  background-color: #0095da; /*#4fabcf;*/
+  display: flex;
+  margin-left: 20px;
+  margin-top:5px;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 4px; /*los padding controlan hasta donde va el circulo, pero los lims no son simetricos*/
+  cursor: pointer;
+}
+
+.networkButtons{
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-width :0.2px;
+  cursor: pointer
+}
+
+  .btn-circle {
+      background-color: rgb(6, 2, 32);
+      transform: translateX(0px);
+      border-radius: 50%; /*le da la forma circular*/
+      width: 14px; /*20 */
+      height: 14px; /*20 */
+      transition: 300ms; /*tiempo transicion */
+  }
+
+  .active-toggle {
+      /*background-color: rgb(1, 12, 5);*/
+      transform: translateX(15px); /*30 lo que se mueve el circulo*/
+      transition: 300ms; /*velocidad desplazmto*/
+      align-items: right; 
+  }
+
+  /*No se pa q sirve*/
+  .checkbox {
+      display: none;
+  }
+  /*No funciona*/
+  .switchtext{
+      display: inline-block;
+    }
+    
+/*declaramos botones para cambio color con click*/
+.networkButtons {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+      background: white;
+      color:black;
+      text-decoration: none;
+      padding: 9px 10px;
+      border-radius: 8px;
+      height:40px;
+    }
+
+/*TOGGLESWITCH-ends*/
+/*TABLE-ends*/
+.mumbai-logo{
+  height:17px;
+  width:16px;
+  position: center;
+  /*filter: invert(0%) sepia(5%) saturate(0%) hue-rotate(29deg) brightness(92%) contrast(104%);*/
+  
+}
+.bsc-logo{
+  height:17px;
+  width:16px;
+  position: center;
+}
+.eth-logo{
+  height:17px;
+  width:23px;
+  position: center;
+}
+
+  /*Validate Inputs*/
+
+  #decimals-error-msg{
+    color:red;
+    display:flex;
+    font-size: 11px;
+    padding-top: 13px;
+  } 
+  #numberTokens-error-msg{
+    color:red;
+    display:flex;
+    font-size: 11px;
+    padding-top: 13px;
+  }
+  #name-error-msg{
+    color:red;
+    display:flex;
+    font-size: 11px;
+    padding-top: 13px;
+  }
+  #symbol-error-msg{
+    color:red;
+    display:flex;
+    font-size: 11px;
+    padding-top: 13px;
+  }
+  #maxWhale-error-msg{
+    color: red;
+    font-size: 11px;
+    padding-top: 13px;
+    margin-top: 22px;
+    font-size: 9px;
+    text-align: center;
+    width: 100px;
+  }
+  /*Install Wallet*/
+  .install-wallet-link{
+    color: #003087;
+    margin-left: 10px;
+  }
+
+  .install-wallet-link:hover {
+    color: #009cde;
+  }
+/*Connect Wallet*/
+.connect-wallet.multistep{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: #0095da; /*#003087;*/
+  /*text-transform: uppercase;*/
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: 0 auto !important; 
+  /*display: flex;*/
+  justify-content: center;
+}
+
+.connect-wallet.multistep:hover {
+  background-color: rgb(20 74 171);
+}
+
+
+.container.wallet{
+  display: flex;
+  width: auto;
+
+}
+
+
+.design .page .field .coming-soon{
+  margin-top: 23px;
+    margin-left: 16.5px;
+    color: red;
+    font-size: 12px;
+}
+
+.design .page .field input.maxWhale{
+  width: 75px;
+  height: 20px;
+  margin-left: 25px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-size: 10px;
+}

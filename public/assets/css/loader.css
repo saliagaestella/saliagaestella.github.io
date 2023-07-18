@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/*
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #000;
+}
+*/
+label.loader{
+  position: relative;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    border-left-color: rgb(1 200 247);
+    animation: rotate 1.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    align-items: center;
+    justify-content: center;
+    margin: 25%;
+}
+@keyframes rotate {
+  50%{
+    border-left-color: rgb(9 83 168);
+  }
+  75%{
+    border-left-color: #01354d;
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+label .check-icon{
+  display: none;
+}
+input.loader{
+  display: none;  /*el input que al clickar, sale el tick verde, es un tick box*/
+}
+/* TICK VERDE
+label .check-icon:after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 2px;
+  transform: scaleX(-1) rotate(135deg);
+  height: 11px;
+  width: 4px;
+  border-top: 4px solid #5cb85c;
+  border-right: 4px solid #5cb85c;
+  transform-origin: left top;
+  animation: check-icon 0.8s ease;
+}
+@keyframes check-icon {
+  0%{
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20%{
+    height: 0;
+    width: 4px;
+    opacity: 1;
+  }
+  40%{
+    height: 11px;
+    width: 4px;
+    opacity: 1;
+  }
+  100%{
+    height: 11px;
+    width: 4px;
+    opacity: 1;
+  }
+}
+input{
+  display: none; 
+}
+input:checked ~ label .check-icon{
+  display: block;
+}
+input:checked ~ label{
+  animation: none;
+  border-color: #5cb85c;
+  transition: border 0.5s ease-out;
+}
+*/
+
+/*Status Mssg*/
+.statusText {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.patienceText {
+  font-size: 12px;
+  margin-top: 20px;
+}

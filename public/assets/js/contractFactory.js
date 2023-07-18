@@ -28,7 +28,17 @@ COSAS PENDIENTES JS:
             - Meter mas smart-contracts
             - Añadir opción comprar cryptos (onramp)
             - Otras wallets(Trustwallet)
-            
+
+			USANDO ahora mismo wevelop-web.sol (con abi y bytecode de remix: import dentro de remix seleccionar el contrato en concreto)
+			 --> al meter value, precio muy alto. Da igual si como variable o como valor fijo.
+			 --> con value precio en eth 800$(da igual variable o fijo), sin el 70$
+			 --> en remix poniendo value alto el contrato no pasa de 100$: culpa del js
+			 -->
+
+			RESTO SOL:
+			--> contract factory+eattheblocks = pruebas con extra
+			--> wevelop.sol + v1.5.sol = tienen ya extras metidos pero dan errores: "{"code": -32000,"message": "execution reverted"}"
+			--> creo que v1.5.sol es la ult versión, pero no debería dar ese error, funciono el dia antes de comer en casa adri
             
   */ 
 
@@ -50,7 +60,7 @@ var isMumbai,
 const $assetForm = document.getElementById('asset-form');
 
 //Bytecode and ABi --> wevelop contract
-const abi = [
+/*const abi = [
 	{
 		"inputs": [
 			{
@@ -485,10 +495,590 @@ const abi = [
 		"type": "function"
 	}
 ];
+*/
+/*const abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name_",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "symbol_",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "decimals_",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalSupply_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address payable",
+				"name": "target_",
+				"type": "address"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_generator",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "subtractedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "decreaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getOwner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "addedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "increaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "mint",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+];*/
 
-const bytecode =
-    '60806040526040516200123a3803806200123a833981810160405260a08110156200002957600080fd5b81019080805160405193929190846401000000008211156200004a57600080fd5b9083019060208201858111156200006057600080fd5b82516401000000008111828201881017156200007b57600080fd5b82525081516020918201929091019080838360005b83811015620000aa57818101518382015260200162000090565b50505050905090810190601f168015620000d85780820380516001836020036101000a031916815260200191505b5060405260200180516040519392919084640100000000821115620000fc57600080fd5b9083019060208201858111156200011257600080fd5b82516401000000008111828201881017156200012d57600080fd5b82525081516020918201929091019080838360005b838110156200015c57818101518382015260200162000142565b50505050905090810190601f1680156200018a5780820380516001836020036101000a031916815260200191505b5060409081526020820151908201516060909201519093509091506000620001ba6001600160e01b03620002ec16565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350845162000219906006906020880190620002f1565b5083516200022f906005906020870190620002f1565b506004805460ff191660ff85161790556003829055600780546001600160a01b0319166001600160a01b038316179055336000818152600160209081526040808320869055805186815290517fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef929181900390910190a36007546040516001600160a01b03909116903480156108fc02916000818181858888f19350505050158015620002e0573d6000803e3d6000fd5b50505050505062000393565b335b90565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200033457805160ff191683800117855562000364565b8280016001018555821562000364579182015b828111156200036457825182559160200191906001019062000347565b506200037292915062000376565b5090565b620002ee91905b808211156200037257600081556001016200037d565b610e9780620003a36000396000f3fe608060405234801561001057600080fd5b506004361061010b5760003560e01c80638060156b116100a2578063a0712d6811610071578063a0712d68146102d3578063a457c2d7146102f0578063a9059cbb1461031c578063dd62ed3e14610348578063f2fde38b146103765761010b565b80638060156b14610297578063893d20e81461029f5780638da5cb5b146102c357806395d89b41146102cb5761010b565b8063313ce567116100de578063313ce5671461021d578063395093511461023b57806370a0823114610267578063715018a61461028d5761010b565b806306fdde0314610110578063095ea7b31461018d57806318160ddd146101cd57806323b872dd146101e7575b600080fd5b61011861039c565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561015257818101518382015260200161013a565b50505050905090810190601f16801561017f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101b9600480360360408110156101a357600080fd5b506001600160a01b038135169060200135610432565b604080519115158252519081900360200190f35b6101d561044f565b60408051918252519081900360200190f35b6101b9600480360360608110156101fd57600080fd5b506001600160a01b03813581169160208101359091169060400135610455565b6102256104e2565b6040805160ff9092168252519081900360200190f35b6101b96004803603604081101561025157600080fd5b506001600160a01b0381351690602001356104eb565b6101d56004803603602081101561027d57600080fd5b50356001600160a01b031661053f565b61029561055a565b005b61011861060e565b6102a761063c565b604080516001600160a01b039092168252519081900360200190f35b6102a761064b565b61011861065a565b6101b9600480360360208110156102e957600080fd5b50356106bb565b6101b96004803603604081101561030657600080fd5b506001600160a01b038135169060200135610740565b6101b96004803603604081101561033257600080fd5b506001600160a01b0381351690602001356107ae565b6101d56004803603604081101561035e57600080fd5b506001600160a01b03813581169160200135166107c2565b6102956004803603602081101561038c57600080fd5b50356001600160a01b03166107ed565b60068054604080516020601f60026000196101006001881615020190951694909404938401819004810282018101909252828152606093909290918301828280156104285780601f106103fd57610100808354040283529160200191610428565b820191906000526020600020905b81548152906001019060200180831161040b57829003601f168201915b5050505050905090565b600061044661043f610863565b8484610867565b50600192915050565b60035490565b6000610462848484610953565b6104d88461046e610863565b6104d385604051806060016040528060288152602001610dcd602891396001600160a01b038a166000908152600260205260408120906104ac610863565b6001600160a01b03168152602081019190915260400160002054919063ffffffff610ab116565b610867565b5060019392505050565b60045460ff1690565b60006104466104f8610863565b846104d38560026000610509610863565b6001600160a01b03908116825260208083019390935260409182016000908120918c16815292529020549063ffffffff610b4816565b6001600160a01b031660009081526001602052604090205490565b610562610863565b6000546001600160a01b039081169116146105c4576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6040518060400160405280601281526020017168747470733a2f2f776576656c6f702e696f60701b81525081565b600061064661064b565b905090565b6000546001600160a01b031690565b60058054604080516020601f60026000196101006001881615020190951694909404938401819004810282018101909252828152606093909290918301828280156104285780601f106103fd57610100808354040283529160200191610428565b60006106c5610863565b6000546001600160a01b03908116911614610727576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b610738610732610863565b83610ba9565b506001919050565b600061044661074d610863565b846104d385604051806060016040528060258152602001610e3e6025913960026000610777610863565b6001600160a01b03908116825260208083019390935260409182016000908120918d1681529252902054919063ffffffff610ab116565b60006104466107bb610863565b8484610953565b6001600160a01b03918216600090815260026020908152604080832093909416825291909152205490565b6107f5610863565b6000546001600160a01b03908116911614610857576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b61086081610c9b565b50565b3390565b6001600160a01b0383166108ac5760405162461bcd60e51b8152600401808060200182810382526024815260200180610e1a6024913960400191505060405180910390fd5b6001600160a01b0382166108f15760405162461bcd60e51b8152600401808060200182810382526022815260200180610d856022913960400191505060405180910390fd5b6001600160a01b03808416600081815260026020908152604080832094871680845294825291829020859055815185815291517f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259281900390910190a3505050565b6001600160a01b0383166109985760405162461bcd60e51b8152600401808060200182810382526025815260200180610df56025913960400191505060405180910390fd5b6001600160a01b0382166109dd5760405162461bcd60e51b8152600401808060200182810382526023815260200180610d3c6023913960400191505060405180910390fd5b610a2081604051806060016040528060268152602001610da7602691396001600160a01b038616600090815260016020526040902054919063ffffffff610ab116565b6001600160a01b038085166000908152600160205260408082209390935590841681522054610a55908263ffffffff610b4816565b6001600160a01b0380841660008181526001602090815260409182902094909455805185815290519193928716927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef92918290030190a3505050565b60008184841115610b405760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b83811015610b05578181015183820152602001610aed565b50505050905090810190601f168015610b325780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b600082820183811015610ba2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b6001600160a01b038216610c04576040805162461bcd60e51b815260206004820152601f60248201527f45524332303a206d696e7420746f20746865207a65726f206164647265737300604482015290519081900360640190fd5b600354610c17908263ffffffff610b4816565b6003556001600160a01b038216600090815260016020526040902054610c43908263ffffffff610b4816565b6001600160a01b03831660008181526001602090815260408083209490945583518581529351929391927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9281900390910190a35050565b6001600160a01b038116610ce05760405162461bcd60e51b8152600401808060200182810382526026815260200180610d5f6026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe45524332303a207472616e7366657220746f20746865207a65726f20616464726573734f776e61626c653a206e6577206f776e657220697320746865207a65726f206164647265737345524332303a20617070726f766520746f20746865207a65726f206164647265737345524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e636545524332303a207472616e7366657220616d6f756e74206578636565647320616c6c6f77616e636545524332303a207472616e736665722066726f6d20746865207a65726f206164647265737345524332303a20617070726f76652066726f6d20746865207a65726f206164647265737345524332303a2064656372656173656420616c6c6f77616e63652062656c6f77207a65726fa265627a7a723158200106cb5f966587342056a753b1a3e2e8d6545fe4547980fb317c4400e7d6baa764736f6c63430005100032';
+//ABI contract factory
+const abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "decimals",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "supply",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenType",
+				"type": "uint256"
+			}
+		],
+		"name": "deployPaidBNB",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "newPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "updateDeployPriceBNB",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "withdrawBNB",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	},
+	{
+		"inputs": [],
+		"name": "getDeployPriceBNB",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
 
+//value variables
+
+let cryptoAmountNum;
+let currentPrice;
+let crypto2;
 //User variables
 let user; 
 let address; //user address
@@ -573,19 +1163,20 @@ chainIdname = 'Polygon Mainnet';
 isPolygon = true;
 networkBtnId = 'btn-polygon';
 isMainnet = true;
-value = '119.44';
-} else if (chainId2 === 96){
+//getPrice('matic');
+
+} else if (chainId2 === 56){
 chainIdname = 'BSC Mainnet';
 isBscmain = true;
 networkBtnId = 'btn-bscMain';
 isMainnet = true;
-value = '0.37';
+//getPrice('bnb');
 } else if (chainId2 === 1){
 chainIdname = 'ETH Mainnet';
 isEthmain = true;
 networkBtnId = 'btn-eth';
 isMainnet = true;
-value = '0.00074';
+//getPrice('eth');
 }
 //$currentChainText.className = "show";
 //currentChainText.innerHTML = `Current chain: ${chainIdname}`; //añadir logo chain
@@ -781,8 +1372,6 @@ const networks = {
 /*2.3 ...Switch network function...*/
 async function switchNetwork(element, networkName) {
     let error = false;
-	contactUs.style.marginTop = "120px";
-	document.getElementById('intento').innerHTML= '';
     statusText.innerHTML ='';
     totalSupply.innerHTML = '';
     //currentChainText.innerHTML = '';
@@ -831,33 +1420,268 @@ async function switchNetwork(element, networkName) {
 }}
   /*2.3 Switch network function ends*/
 
-/*3. --- Set value according to chain --- */
+/*3. Add extra function */
+document.getElementById('extraMarkA').style.display = "none";
+document.getElementById('extraMarkF').style.display = "none";
+document.getElementById('extraTreasA').style.display = "none";
+document.getElementById('extraTreasF').style.display = "none";
+document.getElementById('extraLiqA').style.display = "none";
+document.getElementById('extraLiqF').style.display = "none";
+
+var nExtra = 0;
+function addExtra(type,displayA,displayF) {
+	// Get the checkbox
+	var checkBox = document.getElementById(type);
+	// If the checkbox is checked, display the output text
+	
+	if (checkBox.checked == true){
+		nExtra += 1;
+		document.getElementById(displayA).style.display = "block";
+		document.getElementById(displayF).style.display = "block";
+	} else {
+		nExtra -= 1;
+		document.getElementById(displayA).style.display = "none";
+		document.getElementById(displayF).style.display = "none";
+	}
+	return nExtra;
+}
+let dollars = 50;
+function dollarAmount(nExtra){
+	if (nExtra ===0){
+		dollars = 50;
+	} else if (nExtra ===1){
+		dollars = 75;
+	} else if (nExtra ===2){
+		dollars = 100;
+	} else if (nExtra ===3){
+		dollars = 125;
+	} else{
+		console.log('An error occured when selecting the extras');
+	}
+	return dollars;
+}
+/*4. --- Real time crypto value --- */
+//Hacer una fx que sirva para todas las chain, cambiando params, segun  chainID*/
+
+/*
+function getPrice(crypto) {
+  let endpoint;
+  let params;
+  dollarAmount(nExtra);
+  // Define the endpoint and parameters for different crypto
+  switch(crypto.toUpperCase()) {
+    case 'ETH':
+      endpoint = 'https://min-api.cryptocompare.com/data/price';
+      params = { fsym: 'ETH', tsyms: 'USD' };
+      break;
+    case 'MATIC':
+      endpoint = 'https://min-api.cryptocompare.com/data/price';
+      params = { fsym: 'MATIC', tsyms: 'USD' };
+      break;
+	case 'BNB':
+		endpoint = 'https://min-api.cryptocompare.com/data/price';
+		params = { fsym: 'BNB', tsyms: 'USD' };
+		break;
+    default:
+      console.log(`Invalid crypto symbol ${crypto}. Please use 'ETH' or 'MATIC'.`);
+      return;
+  }
+  // Make the GET request
+  axios.get(endpoint, { params })
+    .then(response => {
+      // Extract the current price
+      switch(crypto.toUpperCase()) {
+        case 'ETH':
+          currentPrice = response.data.USD;
+          break;
+        case 'MATIC':
+          currentPrice = response.data.USD;
+          break;
+		case 'BNB':
+			currentPrice = response.data.USD;
+			break;
+      }
+
+	 // Calculate the number of crypto that is equal to $
+	 cryptoAmountNum = 50 / currentPrice;
+	 cryptoAmount= cryptoAmountNum.toString();
+	 console.log(cryptoAmount);
+	 // Print the result
+	 console.log(`${cryptoAmount} ${crypto} is equal to $${dollars} at a price of $${currentPrice} per ${crypto}`);
+   })
+   .catch(error => {
+	 console.log(error);
+   });
+   return cryptoAmount
+} */
+
+
+let cryptoAmount;
+function getPrice(crypto) {
+			let endpoint;
+			let params;
+			// Define the endpoint and parameters for different crypto
+			switch(crypto.toUpperCase()) {
+				case 'ETH':
+				endpoint = 'https://min-api.cryptocompare.com/data/price';
+				params = { fsym: 'ETH', tsyms: 'USD' };
+				break;
+				case 'MATIC':
+				endpoint = 'https://min-api.cryptocompare.com/data/price';
+				params = { fsym: 'MATIC', tsyms: 'USD' };
+				break;
+				case 'BNB':
+					endpoint = 'https://min-api.cryptocompare.com/data/price';
+					params = { fsym: 'BNB', tsyms: 'USD' };
+					break;
+				default:
+				console.log(`Invalid crypto symbol ${crypto}. Please use 'ETH' or 'MATIC'.`);
+				return;
+			}
+
+			// Make the GET request
+			axios.get(endpoint, { params })
+				.then(response => {
+				// Extract the current price
+				dollarAmount(nExtra);
+				let currentPrice;
+				switch(crypto.toUpperCase()) {
+					case 'ETH':
+					currentPrice = response.data.USD;
+					break;
+					case 'MATIC':
+					currentPrice = response.data.USD;
+					break;
+					case 'BNB':
+						currentPrice = response.data.USD;
+						break;
+				}
+				// Calculate the number of crypto that is equal to $50
+				cryptoAmountNum = dollars / currentPrice;
+				cryptoAmount1= cryptoAmountNum.toString();
+				cryptoAmount = web3.utils.toWei(cryptoAmount1)
+				console.log(cryptoAmount);
+				// Print the result
+				console.log(`${cryptoAmount} ${crypto} is equal to ${dollars} at a price of $${currentPrice} per ${crypto}`);
+				})
+				.catch(error => {
+				console.log(error);
+				});
+				return cryptoAmount
+            }
 
 let value2;
-function setValue(chainId2){
+/*
+async function setValue(chainId2,cryptoamount){
     //1,2,3 -> free (mumbai,bsctest,goerli)
     //4,5,6 -> $$ (polygon,bscmain,eth  )
-    value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
-    (chainId2 === 137) ? web3.utils.toWei('119.44') : (chainId2 === 56) ? web3.utils.toWei('0.0037') : (chainId2 === 1) ? web3.utils.toWei('0.00074') : 'other';
-    console.log(value2);
-    return value2;
+	setTimeout(() => { getPrice('matic');}, 6000)
+
+    setTimeout(() => {
+			value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+			(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+			console.log('hola');
+			console.log(value2);
+			return value2;  
+		}, 8000)
+} */
+async function setValue() {
+	if (chainId2===137){
+		let cryptoAmount = await getPrice('matic');
+	}else if(chainId2===56){
+		let cryptoAmount = await getPrice('bnb');
+	} else if (chainId2===1){
+		let cryptoAmount = await getPrice('eth');
+	} else if (chainId2 === 80001){
+		let cryptoAmount = await getPrice('matic');//web3.utils.toWei('0') 
+	}else if (chainId2 === 97){
+		let cryptoAmount = web3.utils.toWei('0');
+	}else if (chainId2 === 5){
+		let cryptoAmount = web3.utils.toWei('0'); //await getPrice('eth');//
+	}else{console.log('Error, not in the right chain')}
+
 }
+	  /*
+	  setTimeout(() => {value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+			(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+			console.log('hola');
+			console.log(value2);
+			return value2;  },2000)*/
 
 
-/* ----4. CONTRACT---- */  
+
+ 
+/*4.2 --- Set value according to chain --- */
+/*
+let value2;
+function setValue(chainId2,cryptoamount){
+    //1,2,3 -> free (mumbai,bsctest,goerli)
+    //4,5,6 -> $$ (polygon,bscmain,eth  )
+	//dollarsToCrypto(currentPrice, dollars);
+	
+		//if (chainId2 === 137){
+			getPrice('matic')
+		setTimeout(() => {
+			value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+			(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+			console.log('hola');
+			console.log(value2);
+			return value2;  
+		}, 1000) */
 
 
-  /*4.1 ...Declarar el form... */ 
+		/*
+		} else if(chainId2 === 56){
+			getPrice('bnb')
+			value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+			(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+			console.log(value2);
+			return value2; 
+		} else if(chainId2 === 1){
+			getPrice('eth')
+			value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+			(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+			console.log(value2);
+			return value2; 
+		} else {
+			value2=0;
+		}
+	  */
+	
+   //     }
+	/*
+	} else if (nExtra === 1) {
+		value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+    (chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+    console.log(value2);
+    return value2; 
+		
+	}else if(nExtra === 2){
+		value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+		(chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+		console.log(value2);
+		return value2; 
+		
+	}else if (nExtra === 3){
+	value2 = (chainId2 === 80001) ? web3.utils.toWei('0') : (chainId2 === 97) ? web3.utils.toWei('0') : (chainId2 === 5) ? web3.utils.toWei('0') : 
+    (chainId2 === 137) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 56) ? web3.utils.toWei(cryptoAmount) : (chainId2 === 1) ? web3.utils.toWei(cryptoAmount) : 'other';
+    console.log(value2);
+    return value2; 
+		} */
+		
+
+
+/* ----5. CONTRACT---- */  
+
+
+  /*5.1 ...Declarar el form... */ 
 
 $assetForm.addEventListener("submit", async function (e,value) { 
   //prevent the form from actually submitting.
   e.preventDefault();
   //clean text
-  contactUs.style.marginTop = "120px";
-  document.getElementById('intento').innerHTML = '';
   statusText.innerHTML ='';
   totalSupply.innerHTML = '';
-  buyTokens.innerHTML = '';
   document.getElementById('decimals-error-msg').innerHTML = '';
   document.getElementById('numberTokens-error-msg').innerHTML = '';
   document.getElementById('symbol-error-msg').innerHTML = '';
@@ -866,14 +1690,14 @@ $assetForm.addEventListener("submit", async function (e,value) {
    $prompt = 'Please connect wallet to use the app';
    snackbar($prompt);
 } else { 
-  /* 4.2 ...Declarar los parametros del contrato... */
+  /* 5.2 ...Declarar los parametros del contrato... */
 
         let $numberTokens = document.getElementById('numberTokens').value; 
         let $name_ = document.getElementById('name').value;
         let $decimalUnits = document.getElementById('decimals').value;
         let $symbol_ = document.getElementById('symbol').value;
         let $initialSupply_= BigInt($numberTokens*Math.pow(10, document.getElementById('decimals').value));
-  /* 4.3. ...Validar input form...*/
+  /* 5.3. ...Validar input form...*/
         if ($name_ === '') {
             document.getElementById('name-error-msg').innerHTML = "Input can't be blank"
         } else if ($symbol_ === '') {
@@ -887,99 +1711,47 @@ $assetForm.addEventListener("submit", async function (e,value) {
         }else if (isNaN($numberTokens)) {
             document.getElementById('numberTokens-error-msg').innerHTML = "Please insert numeric values only"
         } else {
-  /*4.4 ...Deploy Contract...*/
-			contactUs.style.marginTop = "50px";
-			document.getElementById('intento').innerHTML = "Transaction details";
-            buyTokens.innerHTML = ('<span class="chain-emoji">⛓</span> If not enough funds for transaction you can buy them here:');
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span> Waiting for contract to be deployed...';
-			totalSupply.innerHTML = (`<span class="chain-emoji">⛓</span> Total Supply taking into account decimals: ${$initialSupply_}`);
-            setValue(chainId2);
-            const standardtokenContract = new web3.eth.Contract(abi);
-            standardtokenContract.
-                deploy({
-                    data: '0x' + bytecode,
-                    arguments: [
-                        $name_,
-                        $symbol_,
-                        $decimalUnits,
-                        $initialSupply_,
-                        feeReceiver_],
-                    })
-                .send({
-                    from: userAddress,
-                    value: value2,
-    
-  /* 4.5 ...Transaction Hash Message...*/ //=>    IMPORTANTE dar soluciones si tarda tiempo en hacerse el deploy (contactarnos o algo asi)
-            },function (error, transactionHash) {
-                if (error){
-                        if(error.code === 4001) {
-                            $prompt = 'User denied transaction';
-							contactUs.style.marginTop = "120px";
-                            document.getElementById("totalSupply").innerHTML = "";
-                            document.getElementById("buyTokens").innerHTML = "";
-                            document.getElementById("statusText").innerHTML = "";
-							document.getElementById('intento').innerHTML= '';
-                            snackbar($prompt);
-                        } else if(error.code === -32603){
-							contactUs.style.marginTop = "50px";
-                            statusText.innerHTML ='<span class="chain-emoji">⛓</span> Maximum gas fee limit is too low. Edit Transaction fees limit on Metamask: <a href="https://metamask.zendesk.com/hc/en-us/articles/360022895972" " target="_blank">' + 'Gas Control Guide' + '</a> ';
-                        } else {
-							contactUs.style.marginTop = "50px";
-                            statusText.innerHTML ='<span class="chain-emoji">⛓</span> An error occured, check the console (Windows: Ctrl+Shift+J or Mac: Ctrl+Option+J) for more info and try again. If the error persists, contact us at: support@wevelop.io';
-                            console.error(error);
-                        }
-                        return;}
-            console.log('Transaction Hash :', transactionHash); //console
-            //Mensajes en frontend mientras se realiza la transaction=> 
-            if (isMumbai) { 
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink href="https://mumbai.polygonscan.com/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else if (isBsctest) {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink href="https://testnet.bscscan.com/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else if (isGoerli) {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink  href="https://goerli.etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else if (isPolygon) {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink href="https://polygonscan.com/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else if (isBscmain) {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink href="https://bscscan.com/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else if (isEthmain) {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <strong>Transaction hash: </strong> <a class= addressLink href="https://etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a>'
-            } else {
-                statusText.innerHTML = '<span class="chain-emoji">⛓</span> Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). Transaction hash: ' + transactionHash
-            }
-        }).on('confirmation',async function () {
-          return; //si se confirma la transaccion return como argumento a la sig fx
-
-  /*4.6 ...Contract Address Message... */
-        }).then(function (newContractInstance) { 
-            if (!newContractInstance.options.address) { //si no existe el addres muestrame el valor en console
-              console.log(newContractInstance);       
-              return;
-            }
-            console.log('Deployed Contract Address : ', newContractInstance.options.address); //mostrar el contract address en console
-            var newContractAddress = newContractInstance.options.address;
-            //Se muestra el enlace al address segun la chain en web
-            if (isMumbai) { 
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink href="https://mumbai.polygonscan.com/address/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isBsctest) {
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink href="https://testnet.bscscan.com/address/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isGoerli) {
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink href="https://goerli.etherscan.io/address/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isPolygon) {
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink  href="https://polygonscan.com/address/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isBscmain) {
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink  href="https://bscscan.com/address/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isEthmain) {
-            statusText.innerHTML = '<span class="chain-emoji">⛓</span>Transaction  mined! Contract address: <a class= addressLink href="https://etherscan.io/adress/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else
-              statusText.innerHTML = '<span class="chain-emoji">⛓</span>Contract deployed at address <b>' + newContractAddress + '</b> - keep a record of this.'              
-      }).catch(function (error) {
-          console.error(error);
-      })
-  }
-}
-});
-
-
+  /*5.4 ...Deploy Contract...*/
+			/*contactUs.style.marginTop = "50px";*/
+            statusText.innerHTML = 'Waiting for contract to be deployed...';
+			totalSupply.innerHTML = (`${$initialSupply_}`);
+			const from = '0x2c33B91Bf6B2Fe009EcB132269013F007E9C72C7';
+			const tokenType = '3';
+            await setValue(chainId2);
+			
+			console.log(cryptoAmount);
+			var standardtokenContract;
+			var price;
+			async function createInstance(){
+			 standardtokenContract = new web3.eth.Contract(abi,'0x2c33B91Bf6B2Fe009EcB132269013F007E9C72C7');
+				console.log(standardtokenContract);
+				return standardtokenContract;
+			}
+			async function createPrice(){
+				price =  standardtokenContract.methods.getDeployPriceBNB();
+				console.log(price);
+				return price;
+			}
+			async function createContract(){
+				standardtokenContract.methods.deployPaidBNB($name_,
+					$symbol_,
+					$decimalUnits,
+					$initialSupply_,
+					tokenType,)
+					.send({
+						from: userAddress,})
+						//value: web3.utils.toWei('0'), // cryptoAmount, //web3.utils.toWei('3', 'ether'), //web3.utils.toHex(web3.utils.toWei('1')) //cryptoAmount,
+			}
+			await createInstance();
+			
+			await createPrice();
+		
+			await createContract();
+		
+	}}})
+            
+			
+		
 
 
 

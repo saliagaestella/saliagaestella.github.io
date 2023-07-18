@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTY995C50F"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QTY995C50F');
+  </script>
+  
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/favicon.png" rel="icon" />
+<title>Documentation | Wevelop</title>
+<meta name="description" content="Your ThemeForest item Name and description">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="docs/assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="docs/assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="docs/assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="docs/assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="docs/assets/css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="docs/assets/css/color-blue.css" />
+
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a  class="logo ml-md-3" href="docs.html" title="iDocs Template"> <img src="docs\assets\images\logo.png" alt="Wevelop Doc"/> </a> 
+		<span class="text-2 ml-2">v1.3</span> 
+        <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="./index.html">Home</a>
+             <!--
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Dropdown Action</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-dark.html">Another Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-primary.html">Something Else Here</a></li>
+                    <li><a class="dropdown-item" href="index-2.html">Another Link</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Another Action</a>
+                <li><a class="dropdown-item" href="#">Something Else Here</a></li>
+              </ul
+              -->
+            </li>
+            <li><a  href="./public/multistep.html">ERC20 Generator</a></li>
+            <li><a href="./docs.html">Documentation</a></li>
+            <li><a href="./index.html#marker-contact-us">Contact Us</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <!--<li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li> -->
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="https://www.instagram.com/wevelop.io/" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-icons-dribbble"><a data-toggle="tooltip" href="https://telegram.me/wevelop" target="_blank" title="" data-original-title="Telegram"><i class="fab fa-telegram"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div class="idocs-navigation bg-light">
+      <ul class="nav flex-column ">
+        <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_installation">Connect Wallet</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">Choose Chain</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_sass">Token Details</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Transaction Details</a></li>
+          </ul>
+        </li>
+       <!-- <li class="nav-item"><a class="nav-link" href="#idocs_layout">Blockchain Wiki</a> -->
+          <ul class="nav flex-column">
+			<li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
+          </ul>
+        </li>
+    <li class="nav-item"><a class="nav-link" href="#idocs_next_steps">Next Steps</a></li>
+		<li class="nav-item"><a class="nav-link" href="#idocs_faq">FAQ</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="#idocs_source_credits">Source & Credits</a></li>-->
+        <li class="nav-item"><a class="nav-link" href="#idocs_support">Support</a></li>
+		<!--<li class="nav-item"><a class="nav-link" href="#idocs_templates">More Templates</a></li>-->
+    <!--
+		<li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
+      
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+    -->
+      </ul>
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+        <section id="idocs_start">
+        <h1>Documentation</h1>
+        <h2>A guide to Wevelop: Learn to interact with the blockchain and create your own tokens without coding</h2>
+        <p class="lead">Wevelop is a platform that allows users to connect to the blockchain using the Metamask extension and deploy an ERC20 token to the blockchain</p>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong>Version:</strong> 1.3</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> 13 January, 2023</li>
+					<li><strong>Update:</strong> --- </li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info" id="marker-link-generator">If you have any questions that are beyond the scope of this help file, Please feel free to <a target="_blank" href="./index.html#contact-us">contact us</a></p>
+        </section>
+        
+		<hr class="divider" >
+		
+        <!-- Installation
+		============================ -->
+        <section id="idocs_installation">
+          <h2>Install & Connect your Wallet</h2>
+          <p class="lead">Follow the steps below to connect your wallet to our platform:</p>
+          <ol>
+            <li>To get started with Wevelop, you will need to sign in to the blockchain using your wallet. At Wevelop we support the Metamask wallet as it is the best and easiest to use.</li>
+            <li>If you already have a Metamask account and the Metamask's extension for your browser, simply click on the "Connect Wallet" button and sign the transaction. If you do not have an account go to the next step.</li> 
+            <li><code>Create Metamask Account</code>
+                <p>Creating a Metamask account:
+                </p>
+            
+            <ul>
+			  <ol>
+                <li>Install the Metamask extension for your browser. You can find the extension for Chrome, Firefox, Brave, and Edge on the official Metamask  website <a target="_blank" href="https://metamask.io/">(Metamask)</a> or in the browser's extension store.</li>
+                <li>Click on the Metamask icon in your browser. It should appear as a fox head icon.</li>
+                <li>Click on "Create a Wallet"</li>
+                <li>Follow the prompts to set up your account, including creating a password and securely storing your seed phrase. Make sure to write down your seed phrase and store it in a safe place, as it will be needed to recover your account.</li>
+                <li>Connect your Metamask Account to any of the supported networks using our platform. This will allow you to interact with the Ethereum blockchain and use Wevelop.</li>
+              </ol>
+            </ul>
+			<p>Here is an additional resource, a video tutorial that might help you to create a MetaMask account: <a href="https://www.youtube.com/watch?v=A7sbpFvkEe0" target="_blank">Create Metamask Account Tutorial</a></p></li>
+          </ol>
+        </section>
+        
+		<hr class="divider">
+		
+        <!-- HTML Structure
+		============================ -->
+        <section id="idocs_html_structure">
+          <h2>Choose Chain</h2>
+
+            <p class="lead">Wevelop supports three blockchain networks: Binance Smart Chain, Ethereum and Polygon. Each blockchain network has its own unique features and benefits. </p>
+            
+            <h4>Binance Smart Chain:</h4>
+            <ul>
+              <li><strong>High-performance:</strong> BSC is designed to handle high transaction volumes and fast execution times, making it suitable for decentralized applications that require fast and low-cost transactions.</li>
+              <li><strong>Cost-effective:</strong> BSC has lower transaction fees compared to other blockchain networks, making it more affordable for users to deploy and interact with their tokens.</li>
+              <li><strong>Ecosystem compatibility:</strong> BSC is fully compatible with the Ethereum ecosystem and allows for the deployment of ERC-20 and ERC-721 tokens. This means that developers can easily port their existing Ethereum dapps to BSC and take advantage of its performance and cost benefits.</li>
+            </ul>
+            
+            <h4>Ethereum:</h4>
+            <ul>
+              <li><strong>Smart contract functionality:</strong> Ethereum is known for its ability to support smart contracts, which allows for the creation of complex decentralized applications.</li>
+              <li><strong>Large developer community:</strong> Ethereum has a large and active developer community, which means that there is a wide range of tools and resources available for developers.</li>
+              <li><strong>Wide range of dapps:</strong> Ethereum has a wide range of decentralized applications, from gaming to finance, making it a versatile blockchain network.</li>
+              <li><strong>High security:</strong> Ethereum has been around for a long time and it has been proved to be very secure.</li>
+            </ul>
+            
+            <h4>Polygon:</h4>
+            <ul>
+              <li><strong>High scalability:</strong> Polygon is designed to provide high scalability, which allows for more transactions to be processed per second compared to other blockchain networks.</li>
+              <li><strong>Low transaction costs:</strong> Polygon aims to provide low transaction costs, making it more affordable for users to deploy and interact with their tokens.</li>
+              <li><strong>Ecosystem compatibility:</strong> Polygon is based on Ethereum technology and is fully compatible with Ethereum's ecosystem, allowing for the deployment of ERC-20 and ERC-721 tokens.</li>
+              <li><strong>Security:</strong> Polygon uses a unique security model that is designed to provide high security for its users.</li>
+            </ul>
+            
+            <p>It's important to take into consideration that each blockchain network has its own unique features and benefits, so it's important to choose the one that best suits the needs of your project. Testnet is a great tool to test the token deployment and make sure the token works as expected before deploying it on the mainnet.</p>
+            <h4>Testnets:</h4>
+            <p>Wevelop also supports the testnets of these networks (Binance Smart Chain Testnet for BSC, Goerli for Ethereum and Mumbai for Polygon), to allow users to try out their tokens on a testnet before deploying them on the mainnet. Testnets are a simulation of the main blockchain network, where users can test their dapps and smart contracts without risking real assets.</p>
+            <p>Wevelop provides token deployment on testnets as a free service, but it is important to note that this makes no real effect on the blockchain. This means that tokens deployed on testnets cannot be used for any real-world transactions and will not have any actual value.</p>
+            <p>When you are ready to deploy your token on the mainnet, you can select the network of your choice, and Wevelop will guide you through the process. </p>
+            
+            <!-- <p class="alert alert-info">If you need more information, please visit bootstrap site: <a target="_blank" href="https://getbootstrap.com/docs/4.4/layout/grid/">https://getbootstrap.com</a></p> -->
+        
+          </section>
+        
+		<hr class="divider">
+		        
+		<!-- Sass
+		============================ -->
+        <section id="idocs_sass">
+          <h2>Token Details</h2>
+          <p class="lead"> At Wevelop, we believe in a tokenized world. </p>
+          <p>Wevelop gives anyone the power to tokenize the world. We do so through the ERC20 token, the technical standard that provides integration with other smart-contracts and offers security. The standard will now will explain in detail. If you already know what it is and how it used and are just looking for information regarding the use of the Wevelop ERC20 Token Generator, jumpt to the next step: Token Details</p>
+          
+          <h4>The ERC20 Token</h4>
+          <p>An ERC20 token is a type of digital asset that is built on the Ethereum blockchain. ERC20 is a technical standard that defines a set of rules for creating and managing tokens on the Ethereum blockchain. These tokens are designed to be interchangeable and can be used for various purposes such as representing a physical asset, a utility, or a form of currency.</p>
+          <p>One of the key features of ERC20 tokens is that they are based on smart contracts, which are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code. This allows for the automation of various processes, such as the transfer of tokens between parties.</p>
+          <p>The ERC20 standard defines a set of functions that a token must have in order to be considered ERC20 compliant. These include functions for querying the total supply of tokens, the balance of a specific address, and the ability to transfer tokens between addresses. This standardization allows for the creation of ERC20 tokens that can be easily integrated with other smart contracts and dapps on the Ethereum blockchain.</p>
+          <p>Some use cases of ERC20 tokens include:</p>
+          <ul>
+           <li><strong> A physical asset:</strong> ERC20 tokens can be used to represent ownership of a physical asset, such as real estate or artwork. This allows for the tokenization of these assets and makes them more easily transferable and divisible.</li>
+           <li><strong>Utility tokens:</strong> ERC20 tokens can be used as a form of utility, such as for access to a service or product. For example, a company may issue an ERC20 token that can be used to purchase their products or services.</li>
+           <li><strong> Cryptocurrency:</strong> ERC20 tokens can also be used as a form of cryptocurrency, such as Bitcoin or Ethereum. These tokens can be bought and sold on cryptocurrency exchanges and can be used for various transactions.</li>
+          </ul>
+           <p>It's important to note that ERC20 tokens are just one type of token that can be built on the Ethereum blockchain, there are other standards such as ERC721 and ERC1155 that can be used to build different type of tokens with different functionality. Wevelop team will soon develop the infraestructure and software needed to enable users to also create these tokens on the platform.</p>
+           <p>Overall, ERC20 tokens are a versatile and powerful tool that can be used for a wide range of purposes on the Ethereum blockchain.</p>   
+  
+           <h4>Token Details</h4>
+           <p>When creating an ERC20 token, there are several details that need to be defined, including the token's name, symbol, total supply, and decimals.</p>
+           <ul>
+           <li><strong>Name:</strong> The name of the token represents the name of the token as it will appear on the blockchain. For example, "Wevelop Token"</li>
+           <li><strong>Symbol:</strong> The symbol represents the short abbreviation of the token's name. For example, "WVL"</li>
+           <li><strong>Total Supply:</strong> The total supply represents the maximum number of tokens that will be created and exist on the blockchain. For example, if the total supply is set to 100,000,000, that means there will be a maximum of 100,000,000 tokens created and in circulation. It's important to note that once the total supply is set, it can't be changed.</li>
+           <li><strong>Decimals:</strong> The decimals represent the number of decimal places that the token can be divided into. For example, if the decimals are set to 18, that means the token can be divided into 18 decimal places (0.000000000000000001). This allows for more precise transactions and can be useful for tokens that are used for smaller transactions. It's important to note that the decimals can't be changed once the token is deployed.</li>
+          </ul>
+           <p>An example of a token with these details:</p>
+           <div class="token-example">
+           <p><code>Name:</code> "Wevelop Token"</p>
+           <p><code>Symbol:</code> "WVL"</p>
+           <p><code>Total Supply:</code> 100,000,000</p>
+           <p><code>Decimals:</code> 18</p>
+          </div>
+           <p>In this example, we have a token called "Wevelop Token", with the symbol "WVL". The total supply of this token is 100,000,000, meaning that there will be a maximum of 100,000,000 tokens in circulation. And it allows for division of 18 decimal places.</p>
+           <p>It's important to be aware of the Total Supply value, as it will affect the token's scarcity and divisibility. Lower totalSupply will make the token more scarce and higher Total Supply will make the token more available. As for the decimals, it's important to choose a value that fits the use case of the token and the transactions that will be made with it.</p>
+        </ul>
+  
+        </section>
+        
+		<hr class="divider">
+		
+		<!-- Color Schemes
+		============================ -->
+        <section id="idocs_color_schemes">
+          <h2>Transaction Details</h2>
+          <p class="lead">Once you have decided the characteristics you want your token to have, clicked on the "Create Token" button and signed the transaction with Metamask, your token will be deployed to the blockchain </strong></p>
+          <p> When you click on the "Create Token" button, some messages will appear under the Transaction Details section:</p>
+          <ul>
+              <li><strong>Status Message:</strong> Here the information regarding your token deployment to the blockchain will be displayed. Once you click the <span class="cursiva">"Create Contract"</span> button, the following message will appear: <span class="cursiva">"Waiting for Contract to be deployed"</span>. At the same time, a Metamask window will appear asking you to sign the transaction. Signing this transaction will deploy your token to the blockchain and will cost some amount of money, depending on the characteristics you have chosen for your token. If you want more information regarding pricing, check the <u>pricing page</u> from our website. Once the transaction is signed it will be sent to the blockchain. 
+                <p>Before your contract is created succesfully, the transaction has to be validated by the blockchain. This proccess usually happens pretty fast, but sometimes it can take  abit longer and you may have to wait a few minutes, depending on the conditions of the blockchain. A link to your transaction on the blockscanner will appear, where you can check your transaction status. Once it is validated, your smart-contract supporting your token will be deployed to the blockchain and will be ready to use. A link will also be provided to the official blockscanner of your blockchain, so that you can check that your token has been succesfully created with all your characteristics and that you are the owner. You will have the complete ownership of it, as the Metamask account you have signed the transaction with will be saved as the owner of the token on the smart-contract and the blockchain.
+                 </p> </li> 
+              <li><strong>Buy Tokens Message:</strong> In this message a resource is provided in case you don't have enough funds in your Metamask account. As mentioned earlier, for the token deployment some amount that will be specified on the Metamask window prompt has to be paid. In case you do no thave enough funds to pay this amount and sign the transaction you can buy them HERE: </li>
+              <li><strong>Total Supply Message:</strong> The total supply of your token is the number of times your token can be divided into. This number is a function of your number of tokens and the number of decimal places you have decided for your token. If for example, you have chosen that your token has 20 units and 3 decimals places, your total amount will be 20,000. The total supply will influence the scarcity, value and transactions of your token. 
+                <p>  Please note that there is no right supply amount for your token, it will depend of the use you want to provide to your token. The number of decimal places in the industry usually goes from 1-18, with most cryptocurrencies having 18, while the number of token units completely varies. If you want some guidance choosing your Total Supply, the best advice is first, to decide your token`s use case (cryptocurrency, physical asset representation, utility token or others), and then analyze some succesful projects on that space and compare them to yours adapting them to your specific needs. 
+                </p> </li>
+          </ul>
+        </section>
+        
+		<hr class="divider" id="marker-next-steps">
+
+    <!-- Support
+		============================ -->
+
+
+    <section id="idocs_next_steps">
+      <h2>Next steps</h2>
+      <h4>Congratulations on creating your own cryptocurrency!</h4>
+    <p>Now that your tokens are deployed and safely stored in your wallet, there are several important next steps to
+        consider. In this guide, we'll walk you through the process of importing your tokens to MetaMask, adding liquidity
+        to a decentralized exchange, and exploring additional intermediate and advanced steps you can take to enhance the
+        adoption and functionality of your cryptocurrency.</p>
+
+    <h4>1. Importing Tokens to MetaMask:</h4>
+    <ul>
+        <li>Ensure that you have MetaMask installed as a browser extension or a mobile app.</li>
+        <li>Open MetaMask and create a new wallet or import an existing one.</li>
+        <li>Once your wallet is set up, click on the account icon and select "Add Token" or "Custom Token".</li>
+        <li>Provide the contract address of your token, along with the symbol and decimals.</li>
+        <li>MetaMask will then import your tokens, and you'll be able to view your balance within the wallet.</li>
+    </ul>
+
+    <h4>2. Transferring Tokens:</h4>
+    <ul>
+        <li>Open your MetaMask wallet or any other compatible wallet that supports your token.</li>
+        <li>Click on the "Send" or "Transfer" option.</li>
+        <li>Enter the recipient's wallet address and the amount of tokens you want to send.</li>
+        <li>Review the transaction details and confirm the transfer. Ensure you have sufficient balance for gas fees.</li>
+    </ul>
+
+    <h4>3. Paying Gas Fees:</h4>
+    <ul>
+        <li>Gas fees are required to process transactions on the blockchain. They are paid in the native cryptocurrency of
+            the network you're using (e.g., ETH for Ethereum).</li>
+        <li>When you initiate a transaction, your wallet will provide an estimation of the gas fee. You can choose to
+            adjust the gas price to prioritize speed or cost-effectiveness.</li>
+        <li>Confirm the transaction and pay the gas fee using the wallet interface.</li>
+    </ul>
+
+    <h4>4. Adding Liquidity to a Decentralized Exchange (DEX):</h4>
+    <ul>
+        <li>Liquidity is crucial for the success of your token and enables users to trade it easily. Adding liquidity to
+            a DEX like Uniswap or PancakeSwap is a common approach.</li>
+        <li>Visit the website of your chosen DEX and connect your MetaMask wallet.</li>
+        <li>Navigate to the liquidity pool section and select "Add Liquidity".</li>
+        <li>Specify the amount of your token and an equivalent value of another token (e.g., ETH or BNB) to create a
+            trading pair.</li>
+        <li>Confirm the transaction in MetaMask, paying attention to gas fees, and wait for the transaction to be
+            processed.</li>
+        <li>Once the transaction is confirmed, your token will be available for trading on the DEX.</li>
+        <li>In this example, how to add liquidity in PancakeSwap is explained:</li>
+    </ul>
+
+    <h4>5. Allowing Users to Buy Your Tokens:</h4>
+    <ul>
+        <li>Encourage users to visit a decentralized exchange</li>
+          <li>Instruct them to connect their MetaMask wallet or another compatible wallet.</li>
+          <li>Users can then search for your token by its symbol or paste the token contract address.</li>
+          <li>They'll be able to buy your tokens directly from the exchange by swapping them for another cryptocurrency (e.g., ETH or BNB).</li>
+      </ul>
+  
+      <h4>6. Adding Logo, Website, and Other Details to Your Token:</h4>
+      <ul>
+          <li>To add a logo, visit the Etherscan or Binance Smart Chain (BSC) Scan website.</li>
+          <li>Search for your token by contract address and locate the token's page.</li>
+          <li>Look for the option to "Edit Token" or "Submit Token Information" and follow the instructions to upload your
+              logo and provide additional details like a website URL.</li>
+          <li>Some platforms may require you to verify ownership of the token contract before allowing edits.</li>
+      </ul>
+  
+      <h4>7. Advanced Steps:</h4>
+      <ul>
+          <li>Market and promote your token: Engage with your community, create social media accounts, and actively
+              participate in relevant forums and channels. Develop a strong online presence to increase awareness and
+              adoption of your token.</li>
+          <li>Seek listings on additional exchanges: Apply for listings on other reputable exchanges to expand the trading
+              options for your token and attract more users.</li>
+          <li>Develop partnerships: Collaborate with other projects or platforms that align with your token's goals.
+              Partnerships can help increase exposure and create new use cases for your cryptocurrency.</li>
+          <li>Build a decentralized application (DApp): Explore the possibility of developing a DApp that utilizes your
+              token as an integral part of its ecosystem. This can enhance the utility and demand for your token.</li>
+          <li>Regularly communicate updates: Keep your community informed about project developments, upgrades, and
+              upcoming events through official announcements, newsletters, or blog posts.</li>
+          <li>Explore cross-chain compatibility: Consider bridging your token to other blockchain networks to tap into a
+              wider user base and access different DeFi ecosystems.</li>
+          <li>Conduct audits: Engage with reputable auditing firms to ensure the security and reliability of your token's
+              smart contract code.</li>
+          <li>Engage with the community: Organize AMA (Ask Me Anything) sessions, webinars, or conferences to educate and
+              engage with your community. Foster a supportive and active user base.</li>
+      </ul>
+  
+      <p>Remember to keep your token information and branding consistent across different platforms and listings.
+          Regularly update your token's website and social media profiles with relevant information to keep users informed
+          about your project's progress.</p>
+  
+      <p>These steps are just a starting point, and the possibilities are vast. Continuously seek feedback from your
+          community, adapt to market conditions, and explore innovative ways to evolve your token and its ecosystem. Good
+          luck with your cryptocurrency project!</p>
+  
+      <p><em>Note: The process may vary slightly depending on the blockchain network and the specific wallets, exchanges,
+              or tracking platforms you use. Always refer to official documentation and guides provided by the respective
+              platforms for accurate instructions.</em></p>
+    </section>
+      <hr class="divider">
+		
+		<!-- FAQ
+		============================ -->
+		<section id="idocs_faq">
+          <h2>FAQ</h2>
+          <p class="text-4">Take a look at our list of most frequently asked questions (FAQs) and answers:</p>
+          
+		  <div class="row">
+          <div class="col-lg-12">
+            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
+              
+              <div class="card">
+                <div class="card-header" id="heading3">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">How does the token deployment process work?</a> </h5>
+                </div>
+                <div id="collapse3" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                  <div class="card-body">  The token deployment process involves creating and deploying a smart contract on the selected blockchain that represents the token. Customers can use the platform's user interface to input the desired parameters for the token, such as its name, symbol, decimals and total supply. </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header" id="heading4">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">What are the requirements for creating an ERC-20 token on the platform?</a> </h5>
+                </div>
+                <div id="collapse4" class="collapse" aria-labelledby="heading2" data-parent="#popularTopics">
+                  <div class="card-body">  To create an ERC-20 token on the platform, customers need to have a crypto wallet with enough funds to pay for the deployment and any associated gas fees.
+                </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading2">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Which blockchain networks are supported?</a> </h5>
+                </div>
+                <div id="collapse2" class="collapse" aria-labelledby="heading3" data-parent="#popularTopics">
+                  <div class="card-body"> All the EVM networks, such as Ethereum, Binance Smart Chain and Polygon. Here you can check all the available networks: <a href="https://chainlist.org/">https://chainlist.org/ </a> </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading5">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Can I deploy multiple tokens on the platform?</a> </h5>
+                </div>
+                <div id="collapse5" class="collapse" aria-labelledby="heading4" data-parent="#popularTopics">
+                  <div class="card-body"> Yes, customers can deploy multiple tokens on the platform. </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading1">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">What is the number of decimals?</a> </h5>
+                </div>
+                <div id="collapse1" class="collapse" aria-labelledby="heading5" data-parent="#popularTopics">
+                  <div class="card-body"> The number of decimals refers to the number of digits after the decimal point in a token's value. In the case of ERC-20 tokens, the number of decimals can be set manually, meaning that the smallest unit of a token that has X decimals is 1e-X. This is similar to how the smallest unit of a currency, such as the U.S. dollar, is 1 cent (1e-2). This allows for greater precision and flexibility in representing and handling different values of the token. </div>
+                </div>
+              </div>
+          
+        
+              <div class="card">
+                <div class="card-header" id="heading6">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">How can I check the status of my token deployment?</a> </h5>
+                </div>
+                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#popularTopics">
+                  <div class="card-body">Customers can check the status of their token deployment by checking the transaction on the selected blockchain scan or by using the platform's user interface.</div>
+                </div>
+              </div>
+            
+              <div class="card">
+                <div class="card-header" id="heading7">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse6">Are there any fees associated with deploying a token on the platform?</a> </h5>
+                </div>
+                <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#popularTopics">
+                  <div class="card-body">There will be fees associated with deploying a token on the platform, which will be the gas fees for deploying the smart contract on the selected blockchain. A fee will also be charged by Wevelop for managing and deploying the token for the user. The gas fee will depend on the chain the token is deployed into and the fee charged by Wevelop will depend on the characteristics of your token. For more information regarding pricing fees, check our pricing page: PRICE PAGE</a> </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading8">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse6">How can I access the smart contract code for my deployed token?</a> </h5>
+                </div>
+                <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#popularTopics">
+                  <div class="card-body"> The smart contract code for the deployed token can be viewed on the blockchain scanner. After the token is deployed, a link will be provided that will take you directly to your deployed contract on the blockchain scanner so that you can see the code.</a> </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading9">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse6">How can I make my token useful? Learn what a DEX is and how to add liquidity to your token</a> </h5>
+                </div>
+                <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#popularTopics">
+                  <div class="card-body"> 
+                    A decentralized exchange (DEX) is a type of cryptocurrency exchange that runs on a blockchain, allowing for peer-to-peer trading without the need for a central intermediary. To add liquidity to a DEX, a smart contract owner can deposit funds into a liquidity pool smart contract, which holds and manages the funds for trading.
+                    <p>Here are the steps a smart contract owner can take to add liquidity to a DEX:</p>
+                    <ul>
+                    <li>The smart contract owner will need to have a wallet with the assets they wish to add to the liquidity pool.</li>
+                    <li>The smart contract owner will then interact with the liquidity pool smart contract to deposit the assets into the pool. This is typically done by calling the smart contract's "deposit" function and providing the address of the Ethereum wallet holding the assets.</li>
+                    <li>Once the assets are deposited into the liquidity pool, they will be available for trading on the DEX. The smart contract owner will receive a proportional share of the liquidity pool in return, which is represented by a liquidity token.</li>
+                    <li>The smart contract owner can then trade the liquidity token on the DEX, or withdraw the assets from the liquidity pool by calling the smart contract's "withdraw" function.</li> 
+                  </ul>
+                  <p>It's important to note that the specific process for adding liquidity to a DEX can vary depending on the platform, and the smart contract owner should carefully review the documentation and terms of use before depositing assets.</p>
+                  </a> </h5>
+                  </div>
+                </div>
+              </div>
+
+
+              
+            </div>
+          </div>
+        </div>
+          
+        </section>
+        
+		<hr class="divider">
+        
+        <!-- Source & Credits
+		============================ -->
+    <!--
+        <section id="idocs_source_credits">
+          <h2>Source & Credits</h2>
+          <h4>Images:</h4>
+          <ul>
+            <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a></li>
+          </ul>
+		  <h4>Fonts:</h4>
+          <ul>
+            <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+          </ul>
+          <h4>Scripts:</h4>
+          <ul>
+            <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a></li>
+            <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+			<li>Highlight Js - <a target="_blank" href="https://highlightjs.org/">https://highlightjs.org/</a></li>
+			<li>jQuery easing - <a target="_blank" href="http://gsgd.co.uk/sandbox/jquery/easing/">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
+            <li>Magnific Popup - <a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></li>
+          </ul>
+        </section>
+        
+		<hr class="divider">
+		-->
+
+		<!-- Support
+		============================ -->
+
+
+        <section id="idocs_support">
+          <h2>Support</h2>
+          <p>If you have any doubts about Wevelop, please the read our intuitive and helpful documentation which guides you through the steps of creating a ERC20 smart-contract. If this documentation doesn't answer your questions, please feel free to contact us through email or Telegram: <a target="_blank" href="./index.html#contact-us">Contact Us</a></p>
+		  <p> We answer all questions within 24-48 hours in weekdays.<br><br><br><br></p>
+      
+      <h4><em><center>Disclaimer</center></em></h4>
+      <p><em>The following information and guidance provided by the developers of the crypto token and this guide are for informational purposes only and do not constitute legal, financial, or investment advice. We, as the developers, collectively referred to as "we" or "the developers," do not assume any liability or responsibility for the accuracy, completeness, or applicability of the information provided.
+        Developing a crypto token and managing a cryptocurrency project involve inherent risks, including but not limited to technical vulnerabilities, regulatory compliance, market volatility, and potential financial losses. Users should conduct their own research, seek professional advice, and exercise due diligence before making any decisions or taking any actions. The steps and recommendations outlined in this guide are general in nature and may not be suitable or appropriate for every situation or jurisdiction.
+        Furthermore, we cannot guarantee the security, functionality, or performance of any third- party platforms, wallets, exchanges, or services mentioned in this guide. Users are solely responsible for their interactions and transactions with such platforms, and we disclaim any liability arising from any issues, losses, or damages incurred as a result.
+        It is important to comply with all applicable laws, regulations, and guidelines in your jurisdiction when creating, distributing, and managing a cryptocurrency project. This includes but is not limited to compliance with anti-money laundering (AML) and know your customer (KYC) requirements, tax obligations, and securities regulations. Users should consult with legal, tax, and financial professionals to ensure compliance.
+        The smart contract developers involved in creating the crypto token make every effort to ensure the security and functionality of the smart contract code. However, we cannot guarantee the absence of vulnerabilities or unforeseen issues. Users are responsible for reviewing and assessing the smart contract code and conducting independent audits if necessary.
+        By using this guide and the crypto token developed, you agree to hold the developers harmless and release them from any liability, claims, damages, losses, or expenses that may arise from the use of the information provided, the implementation of the crypto token, or the actions taken based on this guide. We recommend users to thoroughly review the terms and conditions, privacy policies, and security measures of any platforms, wallets, exchanges, or services they interact with during the process of utilizing the crypto token.
+        Please seek professional advice, perform your own research, and exercise caution when participating in the cryptocurrency industry. The developers and guide writers are not responsible for any consequences that may arise from your use of the crypto token or the information provided in this guide.</em></p>
+          
+  <!--  
+      <div class="alert alert-warning mb-4"><span class="badge badge-danger text-uppercase">Note:</span> While we aim to provide the best support possible, please keep in mind that it only extends to verified buyers and only to issues related to our template like bugs and errors. Custom modifications or third party module implementations are not included.</div>
+		  <h4>Don’t forget to Rate this template
+			<i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
+		  </h4>
+		  <div class="alert alert-success">
+            Please Add your Review (Opinion) for Our template. It would be a great support for us.<br>
+            Go to your <strong>Themeforest Profile</strong> > <strong>Downloads Tab</strong> > & then You can Rate & Review for our template.<br>
+			Thank You.
+          </div>
+        </section>
+		
+		<hr class="divider">
+		-->
+
+		<!-- More Templates
+		============================ -->
+
+    <!--
+        <section id="idocs_templates">
+          <h2>More Templates</h2>
+          <p class="lead">Checkout Our Below Premium Templates</p>
+		  
+		  <div class="row">
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/28476751?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/simone.jpg" alt="">
+			<h6 class="pt-2">Simone - Personal Portfolio Template</h6>
+			</a>
+		  </div>
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/26454458?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/kenil.jpg" alt="">
+			<h6 class="pt-2">Kenil - Responsive Bootstrap 4 One Page Portfolio Template</h6>
+			</a>
+		  </div>
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/26313677?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/doon.jpg" alt="">
+			<h6 class="pt-2">Doon - One Page Parallax HTML Template</h6>
+			</a>
+		  </div>
+		  
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/27172933?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/domainx.jpg" alt="">
+			<h6 class="pt-2">DomainX- Domain for Sale HTML Template</h6>
+			</a>
+		  </div>
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/28848609?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/oxyy.jpg" alt="">
+			<h6 class="pt-2">Oxyy - Login and Register Form HTML Templates</h6>
+			</a>
+		  </div>
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/27034971?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/koice.jpg" alt="">
+			<h6 class="pt-2">Koice - Invoice HTML Template</h6>
+			</a>
+		  </div>
+		  
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/24017808?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/payyed.jpg" alt="">
+			<h6 class="pt-2">Payyed - Money Transfer and Online Payments HTML Template</h6>
+			</a>
+		  </div>
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://themeforest.net/item/x/22375065?ref=HarnishDesign"><img class="img-fluid border" src="assets/images/templates/quickai.jpg" alt="">
+			<h6 class="pt-2">Quickai - Recharge & Bill Payment, Booking HTML5 Template</h6>
+			</a>
+		  </div>
+		  </div>
+		  
+		  <p class="text-center"><a class="btn btn-lg btn-primary my-4" target="_blank" href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Our Portfolio</a></p>
+          
+        </section>
+		
+		<hr class="divider">
+    -->
+		
+        <!-- Changelog
+		============================ -->
+		
+    <!--
+        <section id="idocs_changelog">
+          <h2>Changelog</h2>
+          <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
+		  <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="http://themeforest.net/user/harnishdesign?ref=HarnishDesign">@themeforest</a> / <a target="_blank" href="http://facebook.com/harnishdesign">@facebook</a> / <a target="_blank" href="http://twitter.com/harnishdesign">@twitter</a> / <a target="_blank" href="https://dribbble.com/harnishdesign">@Dribbble</a></p>
+          
+		  <h3 id="v1-1">Version 1.1 <small class="text-muted">(12 Oct, 2020)</small></h3>
+          <ul class="changelog">
+            <li><span class="badge badge-success">Added</span> Your information here for added new feature</li>
+            <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
+			<li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
+            <li><span class="badge badge-info">Updated</span> FontAwesome to Latest Version</li>
+			<li><span class="badge badge-info">Updated</span> Bootstrap to Latest Version</li>
+			<li><span class="badge badge-info">Updated</span> Improvements in CSS and JS</li>
+          </ul>
+        -->
+		  <hr class="divider">
+		  
+     <!-- 
+          <h3 id="v1-0">Version 1.3 <small class="text-muted">(30 January, 2023)</small></h3>
+          <p>Initial Release</p>
+        </section>        
+      -->
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://www.instagram.com/wevelop.io/" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a data-toggle="tooltip" href="https://telegram.me/wevelop" target="_blank" title="" data-original-title="Telegram"><i class="fab fa-telegram"></i></a></li>
+       <!-- <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li> 
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li> -->
+      </ul>
+      
+      <p class="text-center">COPYRIGHT © 2022 WEVELOP COMPANY</p>
+	 <!-- <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p> -->
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="docs/assets/vendor/jquery/jquery.min.js"></script> 
+<script src="docs/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="docs/assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="docs/assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="docs/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="docs/assets/js/theme.js"></script>
+</body>
+</html>
