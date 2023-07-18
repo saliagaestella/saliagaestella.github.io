@@ -5002,7 +5002,7 @@ async function checkBalance(){
 			if (error) {
 			  console.error('Error checking balance:', error);
 			} else {
-				const requiredFunds = 1 //0.001
+				const requiredFunds = web3.utils.fromWei(cryptoAmount)//1 //0.001
 				const balanceEther = web3.utils.fromWei(balance)
 				console.log(balanceEther);
 				console.log(requiredFunds);
@@ -5041,6 +5041,7 @@ async function deployToken(){
   //e.preventDefault();
   //clean text
   console.log('fuck2');
+  await setValue(chainId2);
  await checkBalance();
 console.log(enoughBalance);
 //enoughBalance=true;
@@ -5092,7 +5093,7 @@ console.log(enoughBalance);
 
 		  //totalSupply.innerHTML = (`${$initialSupply_}`);
 
-            await setValue(chainId2);
+        
 			setTimeout(() => {
 			console.log(cryptoAmount);
 			//await selectAbi();
@@ -5231,10 +5232,11 @@ async function deployTokenwithAntiwhale(){
   //e.preventDefault();
   //clean text
   console.log('fuck2');
-//await checkBalance();
+  await setValue(chainId2)
+  await checkBalance();
 console.log(enoughBalance);
 //enoughBalance=true;
-enoughBalance = true;
+//enoughBalance = true;
   if (enoughBalance=== true) {
 	console.log(enoughBalance)
   statusText.innerHTML ='';
@@ -5277,7 +5279,7 @@ enoughBalance = true;
 
 		  //totalSupply.innerHTML = (`${$initialSupply_}`);
 
-            await setValue(chainId2);
+            
 			setTimeout(() => {
 			console.log(cryptoAmount);
 			selectAbi();
